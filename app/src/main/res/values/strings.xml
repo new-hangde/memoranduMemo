@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Memorandum memo</string>
+    <string name="about" />
+    <string name="delete" />
+    <string name="exit" />
+    <string name="back" />
+    <string name="是">是</string>
+
+
+</resources>
