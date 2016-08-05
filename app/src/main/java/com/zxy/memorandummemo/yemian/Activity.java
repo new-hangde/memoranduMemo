@@ -23,13 +23,13 @@ public class Activity extends AppCompatActivity {
     public String table_name = "pic1";
     String deleteContent ="";
     String deleteDate ="";
-
+    private TextView tv1;
+    String tvContent;
     DbHelper helper = new DbHelper(this, db_name, null, 1);
     SimpleCursorAdapter adapter;
     SQLiteDatabase db;
     Button bt1;
     Button bt2;
-    final String TAG = "Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class Activity extends AppCompatActivity {
         bt1 = (Button) findViewById(R.id.bt1);
         bt2 = (Button) findViewById(R.id.bt2);
         lv1 = (ListView) findViewById(R.id.lv1);
-
+        tv1 = (TextView)findViewById(R.id.tv1);
         bt1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -60,6 +60,7 @@ public class Activity extends AppCompatActivity {
 
                                             db.execSQL("DELETE FROM pic1");
                                         viewList();
+                                        tv1.setText(tvContent);
                                     }
                                 })
                         .setNegativeButton("否",
@@ -102,6 +103,7 @@ public class Activity extends AppCompatActivity {
                                             if (deleteContent.equals(Text) && deleteDate.equals(nText)) {
                                                 deleteData(cursor.getInt(0));
                                                 viewList();
+                                                tv1.setText(tvContent);
                                                 break;
                                             }
                                         }
@@ -144,6 +146,7 @@ public class Activity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         viewList();
+        tv1.setText(tvContent);
     }
 
     public void onRestart(){
@@ -158,12 +161,21 @@ public class Activity extends AppCompatActivity {
     }
 
     public void viewList(){
+        int number =0;
         db = helper.getWritableDatabase();
         Cursor cursor = db.query(table_name, new String[]{"_id", "content", "date"}, null, null, null, null, "date desc");
         adapter = new SimpleCursorAdapter(Activity.this,
                 R.layout.list, cursor, new String[]{"content",
                 "date"}, new int[]{R.id.content, R.id.date});
         lv1.setAdapter(adapter);
+        while(cursor.moveToNext()){
+            number++;
+        }
+        if(number==0){
+            tvContent ="您现在并没有存储备忘录.";
+        } else{
+            tvContent ="您现在存储了"+number+"条备忘录.";
+        }
     }
 
     }

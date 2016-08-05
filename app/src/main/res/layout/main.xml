@@ -10,31 +10,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".yemian.Activity"
     android:weightSum="1">
+    <TextView
+        android:id="@+id/tv1"
+        android:textSize="10dp"
+        android:layout_gravity="top"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/black"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" />
 <ListView
     android:id="@+id/lv1"
+    android:background="@mipmap/dandelion1"
     android:cacheColorHint="@color/colorAccent"
     android:layout_width="fill_parent"
-    android:layout_height="427dp"></ListView>
+    android:layout_height="425dp"></ListView>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <Button
             android:id="@+id/bt1"
+            android:drawableLeft="@drawable/add"
+            android:textSize="10dp"
             android:text="新建"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_weight="1"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/bt2"
-            android:textSize="20dp"
+            android:drawableLeft="@drawable/delete"
+            android:textSize="10dp"
             android:text="全部删除"
-            android:gravity="center"
-            android:layout_weight="1"
+            android:layout_gravity="bottom"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 

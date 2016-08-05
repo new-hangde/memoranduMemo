@@ -4,6 +4,9 @@
     <string name="delete" />
     <string name="exit" />
     <string name="back" />
+    <string name="全部删除" />
+    <string name="删除" />
+    <string name="保存" />
     <string name="是">是</string>
 
 

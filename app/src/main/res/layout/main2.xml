@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,6 +11,7 @@
         android:orientation="horizontal">
     <TextView
         android:text="备忘录"
+        android:background="@android:color/holo_orange_light"
         android:id="@+id/tv1"
         android:gravity="center"
         android:layout_width="fill_parent"
@@ -20,6 +22,7 @@
 
         <Button
             android:id="@+id/bt"
+            android:drawableTop="@drawable/save"
             android:text="保存"
             android:gravity="center"
             android:textSize="20dp"
@@ -29,6 +32,7 @@
     </LinearLayout>
 
     <TextView
+        android:background="@android:color/holo_green_light"
         android:id="@+id/tv2"
         android:gravity="top"
         android:textSize="10dp"
@@ -37,6 +41,7 @@
     <EditText
         android:id="@+id/ed1"
         android:gravity="top"
+        android:background="@mipmap/dandelion"
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
