@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.zxy.memorandummemo.R;
 import com.zxy.memorandummemo.Service.DbHelper;
 
-public class Activity extends AppCompatActivity {
+public class Main extends AppCompatActivity {
     private ListView lv1;
     public String db_name = "db_bwl";
     public String table_name = "pic1";
@@ -42,7 +42,7 @@ public class Activity extends AppCompatActivity {
         bt1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Activity.this, Activity01.class);
+                intent.setClass(Main.this, AddAndModify.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +94,7 @@ public class Activity extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int which) {
                                        db = helper.getWritableDatabase();
                                         Cursor cursor = db.query(table_name, new String[]{"_id", "content", "date"}, null, null, null, null, "date desc");
-                                        adapter = new SimpleCursorAdapter(Activity.this,
+                                        adapter = new SimpleCursorAdapter(Main.this,
                                                 R.layout.list, cursor, new String[]{"content",
                                                 "date"}, new int[]{R.id.content, R.id.date});
                                         while (cursor.moveToNext()) {
@@ -133,7 +133,7 @@ public class Activity extends AppCompatActivity {
                     String content = ((TextView) view.findViewById(R.id.content)).getText().toString();
                     String date = ((TextView) view.findViewById(R.id.date)).getText().toString();
                     Intent intent = new Intent();
-                    intent.setClass(Activity.this, Activity01.class);
+                    intent.setClass(Main.this, AddAndModify.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("date", date);
                     bundle.putString("content", content);
@@ -164,7 +164,7 @@ public class Activity extends AppCompatActivity {
         int number =0;
         db = helper.getWritableDatabase();
         Cursor cursor = db.query(table_name, new String[]{"_id", "content", "date"}, null, null, null, null, "date desc");
-        adapter = new SimpleCursorAdapter(Activity.this,
+        adapter = new SimpleCursorAdapter(Main.this,
                 R.layout.list, cursor, new String[]{"content",
                 "date"}, new int[]{R.id.content, R.id.date});
         lv1.setAdapter(adapter);

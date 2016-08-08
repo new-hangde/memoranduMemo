@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".yemian.Activity">
+        <activity android:name=".yemian.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".yemian.Activity01">
+        <activity android:name=".yemian.AddAndModify">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN2" />
             </intent-filter>

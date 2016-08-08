@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Memorandum memo</string>
+    <string name="app_name">备忘录</string>
     <string name="about" />
     <string name="delete" />
     <string name="exit" />
