@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10px"
+            android:paddingTop="21px">
+            <!-- 帐号文本框 -->
+
+            <EditText
+                android:id="@+id/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="45sp"
+                android:textColor="#ddd" />
+
+            <!-- 文本框左边帐号提示 -->2
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/login_edit"
+                android:layout_alignLeft="@+id/login_edit"
+                android:layout_alignTop="@+id/login_edit"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7sp"
+                android:text="帐号"
+                android:textSize="16dp" />
+
+            <!-- 下拉菜单按钮 -->
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/login_edit"
+                android:layout_alignRight="@+id/login_edit"
+                android:layout_alignTop="@+id/login_edit"
+                android:layout_marginRight="1dp" />
+
+            <!-- 密码文本框 -->
+
+            <EditText
+                android:id="@+id/edit_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/login_edit"
+                android:layout_alignRight="@+id/login_edit"
+                android:layout_below="@+id/login_edit"
+                android:paddingLeft="45sp"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/edit_pwd"
+                android:layout_alignLeft="@+id/edit_pwd"
+                android:layout_alignTop="@+id/edit_pwd"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7sp"
+                android:text="密码"
+                android:textSize="16dp" />
+
+            <!-- 记住密码选项 -->
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btn_login"
+                android:text="记住密码" />
+
+            <Button
+                android:id="@+id/btn_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/btn_login"
+                android:layout_toLeftOf="@id/btn_login"
+                android:text="忘记密码 "
+                android:textColor="@android:color/holo_blue_bright" />
+            <!-- 登录按钮 -->
+
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_alignTop="@id/btn_forget"
+                android:layout_toLeftOf="@id/btn_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/edit_pwd"
+                android:layout_marginRight="7px"
+                android:layout_marginTop="12px"
+                android:text="登录" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- 底部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

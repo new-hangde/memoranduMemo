@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户注册"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10px"
+            android:paddingTop="21px">
+
+            <EditText
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/register_customer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="45sp"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_customer"
+                android:layout_alignLeft="@+id/register_customer"
+                android:layout_alignTop="@+id/register_customer"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="帐号"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignBottom="@+id/register_customer"
+                android:layout_alignTop="@+id/register_customer"
+                android:layout_toRightOf="@id/register_customer">
+
+            </ImageView>
+
+            <EditText
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/register_pwd"
+                android:paddingLeft="45sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/register_customer"
+                android:layout_alignRight="@+id/register_customer"
+                android:layout_below="@+id/register_customer"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_pwd"
+                android:layout_alignLeft="@+id/register_pwd"
+                android:layout_alignTop="@+id/register_pwd"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="密码"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_pwd"
+                android:layout_alignTop="@+id/register_pwd"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/register_pwd">
+
+            </ImageView>
+
+            <EditText
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="60sp"
+                android:id="@+id/ensure_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/register_pwd"
+                android:layout_alignRight="@+id/register_pwd"
+                android:layout_below="@+id/register_pwd"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ensure_pwd"
+                android:layout_alignLeft="@+id/ensure_pwd"
+                android:layout_alignTop="@+id/ensure_pwd"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="确认密码"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_pwd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ensure_pwd"
+                android:layout_alignTop="@+id/ensure_pwd"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/ensure_pwd">
+
+            </ImageView>
+
+            <EditText
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="45sp"
+                android:id="@+id/register_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ensure_pwd"
+                android:layout_alignRight="@+id/ensure_pwd"
+                android:layout_below="@+id/ensure_pwd"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_name"
+                android:layout_alignLeft="@+id/register_name"
+                android:layout_alignTop="@+id/register_name"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="姓名"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_name"
+                android:layout_alignTop="@+id/register_name"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/register_name">
+
+            </ImageView>
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_alignLeft="@+id/register_name"
+                android:layout_alignRight="@+id/register_name"
+                android:layout_below="@+id/register_name"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/man"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="男"/>
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_marginLeft="10dp"
+                    android:text="女"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/radio"
+                android:layout_alignLeft="@+id/radio"
+                android:layout_alignTop="@+id/radio"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="性别"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/radio"
+                android:layout_alignTop="@+id/radio"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/radio">
+
+            </ImageView>
+
+            <EditText
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="45sp"
+                android:id="@+id/register_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radio"
+                android:layout_alignRight="@+id/radio"
+                android:layout_below="@+id/radio"
+                android:textColor="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_email"
+                android:layout_alignLeft="@+id/register_email"
+                android:layout_alignTop="@+id/register_email"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:text="邮箱"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/im_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/register_email"
+                android:layout_alignTop="@+id/register_email"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/register_email">
+
+            </ImageView>
+
+            <TextView
+                android:text="请谨慎填写!"
+                android:textSize="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignBottom="@+id/im_email"
+                android:layout_alignTop="@+id/im_email"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/im_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/register_email"
+                android:text="注册" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
